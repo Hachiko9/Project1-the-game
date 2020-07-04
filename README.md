@@ -7,9 +7,9 @@ With every coin, a little bit of color will be brought to thr screen: the Hero m
   
 ## MVP (DOM - CANVAS)
 
-the player jumps to avoid obstacles
-the player collects coins
-obstacles appear randomly from right side of the screen
+- the player jumps to avoid obstacles
+- the player collects coins
+- obstacles appear randomly from right side of the screen
 coins appear randomly from right side of the screen
 if the player collides with an obstacle, the player loses and the game ends
 if the player collects all the coins, the player wins and the game ends
@@ -22,7 +22,7 @@ personalization of name/sex of the hero
 
 ## Data Structure
 
-# - main.js
+# main.js
     startScreen()
     gameScreen()
     gameOverScreen()
