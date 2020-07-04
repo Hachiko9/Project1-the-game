@@ -7,18 +7,18 @@ With every coin, a little bit of color will be brought to thr screen: the Hero m
   
 ## MVP (DOM - CANVAS)
 
-- the player jumps to avoid obstacles
-- the player collects coins
-- obstacles appear randomly from right side of the screen
-- coins appear randomly from right side of the screen
-- if the player collides with an obstacle, the player loses and the game ends
-- if the player collects all the coins, the player wins and the game ends
+the player jumps to avoid obstacles
+the player collects coins
+obstacles appear randomly from right side of the screen
+coins appear randomly from right side of the screen
+if the player collides with an obstacle, the player loses and the game ends
+if the player collects all the coins, the player wins and the game ends
 
 ## Backlog
 
-- 3 levels
-- 3th level with monster and combat with the witch
-- personalization of name/sex of the hero
+3 levels
+3th level with monster and combat with the witch
+personalization of name/sex of the hero
 
 ## Data Structure
 
@@ -28,7 +28,7 @@ With every coin, a little bit of color will be brought to thr screen: the Hero m
     gameOverScreen()
     WinScreen()
     
-# - game.js
+# game.js
     canvas()
     game()
     startLoop()
@@ -40,27 +40,27 @@ With every coin, a little bit of color will be brought to thr screen: the Hero m
     Win()
     updateBackground()
    
-# - hero
+# hero
     draw()
     jump()
     collect()
     checkCollision()
     
-# - obstacle
+# obstacle
     draw()
 
-# - coin
+# coin
     draw()
 
 ## States y States Transitions
 
-- splashScreen
-- gameScreen
-- gameOverScreen
+splashScreen
+gameScreen
+gameOverScreen
 
 Task
 
-# - main:
+# main:
     buildDom
     startScreen()
     gameScreen()
@@ -68,7 +68,7 @@ Task
     WinScreen()
     addEventListener()
     
-# - game:
+# game:
     canvas()
     game()
     starLoop()
@@ -80,16 +80,16 @@ Task
     Win()
     updateBackground()
     
-# - hero 
+# hero 
     draw()
     jump()
     collect()
     checkCollision()
-    
-# - obstacle
+   
+# obstacle
     draw()
 
-# - coin
+# coin
     draw()
     
 ### Link
