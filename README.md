@@ -1,11 +1,11 @@
-The Legend of CSS: Breathe of the Internet
+# The Legend of CSS: Breathe of the Internet
 
-Desciption
+## Desciption
 
 The user finds himself in a world where all the CSS has been stolen by an evil witch, and not the Internet is a very boring places. The Hero must collects all the CSS coins in order to restore some <style> in the web world, always avoiding the mortal obstacles he will meet on his way.
 With every coin, a little bit of color will be brought to thr screen: the Hero must collect all the coins to WIN.
   
-MVP (DOM - CANVAS)
+## MVP (DOM - CANVAS)
 
 - the player jumps to avoid obstacles
 - the player collects coins
@@ -14,21 +14,21 @@ MVP (DOM - CANVAS)
 - if the player collides with an obstacle, the player loses and the game ends
 - if the player collects all the coins, the player wins and the game ends
 
-Backlog
+## Backlog
 
 - 3 levels
 - 3th level with monster and combat with the witch
 - personalization of name/sex of the hero
 
-Data Structure
+## Data Structure
 
-- main.js
+# - main.js
     startScreen()
     gameScreen()
     gameOverScreen()
     WinScreen()
     
-- game.js
+# - game.js
     canvas()
     game()
     startLoop()
@@ -40,19 +40,19 @@ Data Structure
     Win()
     updateBackground()
    
-- hero
+# - hero
     draw()
     jump()
     collect()
     checkCollision()
     
-- obstacle
+# - obstacle
     draw()
 
-- coin
+# - coin
     draw()
 
-States y States Transitions
+## States y States Transitions
 
 - splashScreen
 - gameScreen
@@ -60,7 +60,7 @@ States y States Transitions
 
 Task
 
-- main:
+# - main:
     buildDom
     startScreen()
     gameScreen()
@@ -68,7 +68,7 @@ Task
     WinScreen()
     addEventListener()
     
-- game:
+# - game:
     canvas()
     game()
     starLoop()
@@ -80,19 +80,19 @@ Task
     Win()
     updateBackground()
     
-- hero 
+# - hero 
     draw()
     jump()
     collect()
     checkCollision()
     
-- obstacle
+# - obstacle
     draw()
 
-- coin
+# - coin
     draw()
     
-Link
-Trello: https://trello.com/b/fjSlcDuS/project-1-the-game
-Git: https://github.com/Hachiko9/Project1-the-game
-Slides: 
+### Link
+### Trello: https://trello.com/b/fjSlcDuS/project-1-the-game
+### Git: https://github.com/Hachiko9/Project1-the-game
+### Slides: 
