@@ -10,15 +10,15 @@ With every coin, a little bit of color will be brought to thr screen: the Hero m
 - the player jumps to avoid obstacles
 - the player collects coins
 - obstacles appear randomly from right side of the screen
-coins appear randomly from right side of the screen
-if the player collides with an obstacle, the player loses and the game ends
-if the player collects all the coins, the player wins and the game ends
+- coins appear randomly from right side of the screen
+- if the player collides with an obstacle, the player loses and the game ends
+- if the player collects all the coins, the player wins and the game ends
 
 ## Backlog
 
-3 levels
-3th level with monster and combat with the witch
-personalization of name/sex of the hero
+- 3 levels
+- 3th level with monster and combat with the witch
+- personalization of name/sex of the hero
 
 ## Data Structure
 
