@@ -1,0 +1,7 @@
+showStartScreen = () => {};
+
+showGameScreen = () => {};
+
+showGameOverScreen = () => {};
+
+showWinScreen = () => {};
