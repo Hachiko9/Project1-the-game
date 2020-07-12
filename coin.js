@@ -1,10 +1,21 @@
-class Coin {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.width = this.width;
-        this.height = this.height;
+class Coin extends Component {
+    constructor(game) {
+      super(game);
+      this.x = 1000;
+      this.y = 130;
+      this.width = 50;
+      this.height = 50;
+      this.img = new Image();
     }
-
-    render() {}
-}
+    draw() {
+      this.img.src = "./assets/black-obstacle.png";
+      this.game.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+    }
+  
+    move() {
+      if (Math.floor(Math.random() * 20) % 3 === 0) {
+        this.x -= 15;
+      }
+    }
+  }
+  
