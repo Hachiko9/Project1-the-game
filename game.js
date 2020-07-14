@@ -10,6 +10,8 @@ class Game {
     this.y = 0;
     this.width = 1000;
     this.height = 400;
+    this.coinsInt;
+    this.obstaclesInt;
   }
 
   splashPage() {
@@ -18,26 +20,25 @@ class Game {
   init() {
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
-    // this.ctx.rect(20, 20, 150, 100);
-    // this.ctx.font = "30px Arial";
-    // this.ctx.fillText("Hello World", 10, 50);
     this.start();
-    this.createObstacles();
-    this.createCoins();
+    this.setObstacles();
+    this.setCoins();
   }
 
   start() {
-    //this.ctx.clearRect(this.x, this.y, this.width, this.height);
-    //this.drawBackground();
     this.renderHero();
-    setInterval(() => {
+    const gameInt = setInterval(() => {
       this.clear();
       //this.drawBackground();
       this.renderHero();
       for (let i = 0; i < this.obstacles.length; i++) {
         this.obstacles[i].move();
         this.obstacles[i].draw();
-        //this.hero.crashCollision(this.obstacles[i]);
+        const isGameOver = this.hero.checkCollision(this.obstacles[i]);
+        if (isGameOver) {
+          this.gameOver(gameInt);
+          return;
+        }
         if (this.obstacles[i].x <= 0) {
           this.obstacles.splice(i, 1);
         }
@@ -55,38 +56,38 @@ class Game {
     }, 1000 / 60);
   }
 
-  createObstacles() {
-    if (Math.floor(Math.random() * 10) % 1 === 0) {
+  setObstacles() {
+    if (Math.floor(Math.random() * 10) % 2 === 0) {
       this.obstacles.push(new Obstacle(this));
     }
 
-    setTimeout(() => {
-      this.createObstacles();
-    }, 2000);
+    this.obstaclesInt =  setTimeout(() => {
+      this.setObstacles();
+    }, 800);
   }
 
-  createCoins() {
-    if (Math.floor(Math.random() * 10) % 5 === 0) {
+   setCoins() {
+    if (Math.floor(Math.random() * 10) % 2 === 0) {
       this.coins.push(new Coin(this));
     }
 
-    setTimeout(() => {
-      this.createCoins();
-    }, 2000);
+    this.coinsInt = setTimeout(() => {
+      this.setCoins();
+    }, 1500);
   }
 
 
 
-  drawBackground() {
-    this.backgroundImg.src = "images/road.png";
-    this.ctx.drawImage(
-      this.backgroundImg,
-      this.x,
-      this.y,
-      this.width,
-      this.height
-    );
-  }
+  // drawBackground() {
+  //   this.backgroundImg.src = "images/road.png";
+  //   this.ctx.drawImage(
+  //     this.backgroundImg,
+  //     this.x,
+  //     this.y,
+  //     this.width,
+  //     this.height
+  //   );
+  // }
 
   renderHero() {
     this.hero.drawComponent("./assets/hero.png");
@@ -94,5 +95,16 @@ class Game {
 
   clear() {
     this.ctx.clearRect(this.x, this.y, this.width, this.height);
+  }
+
+  gameOver(gameInt) {
+    this.clear();
+    clearInterval(gameInt);
+    clearTimeout(this.obstaclesInt);
+    clearTimeout(this.coinsInt);
+    this.obstacles = undefined;
+    this.coins = undefined;
+    this.ctx.font = "16px Arial";
+    this.ctx.fillText('Game Over', 100, 100);
   }
 }

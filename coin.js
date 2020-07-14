@@ -2,7 +2,7 @@ class Coin extends Component {
     constructor(game) {
       super(game);
       this.x = 1000;
-      this.y = 130;
+      this.y = 100;
       this.width = 50;
       this.height = 50;
       this.img = new Image();

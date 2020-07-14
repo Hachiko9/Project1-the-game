@@ -8,8 +8,8 @@ class Player extends Component {
   move() {
     document.onkeydown = (event) => {
       const key = event.keyCode;
-      const possibleKeysStrokes = [32, 38];
-      if (possibleKeysStrokes.includes(key) && this.y === 250) {
+      const keyCodes = [32, 38];
+      if (keyCodes.includes(key) && this.y === 250) {
         switch (key) {
           case 38:
           case 32:
@@ -23,17 +23,15 @@ class Player extends Component {
     };
   }
 
-  crashCollision(element) {
+  checkCollision(element) {
     //y axis
     if (this.y + 10 <= element.y + element.height && this.y >= element.y) {
       //x axis
       if (this.x >= element.x && this.x <= element.x + element.width) {
-        setTimeout(() => {
-          alert("crash");
-        }, 5);
-        window.location.reload();
+        return true;
       }
     }
+    return false;
   }
 
   collectCoin(element) {
@@ -42,8 +40,9 @@ class Player extends Component {
       //x axis
       if (this.x >= element.x && this.x <= element.x + element.width) {
         this.collectedCoins++;
-        console.log(this.collectedCoins)
+        console.log(this.collectedCoins);
       }
     }
   }
+
 }
