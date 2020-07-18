@@ -19,38 +19,42 @@ With every coin, a little bit of color will be brought to thr screen: the Hero m
 - 3 levels
 - 3th level with monster and combat with the witch
 - personalization of name/sex of the hero
+- sprite sheet
+- interactive winner page
 
 ## Data Structure
 
-# main.js
-    startScreen()
-    gameScreen()
-    gameOverScreen()
-    WinScreen()
+# scripts.js
+    startGame()
+    canvas text
     
 # game.js
-    canvas()
-    game()
-    startLoop()
-    checkCollisions()
-    collectCoins()
-    countCoins()
-    drawCanvas()
+    init()
+    start()
+    setObstacles()
+    setCoins()
+    drawBackground()
+    renderHero()
+    clear()
+    enableButton()
     gameOver()
-    Win()
-    updateBackground()
+    winner()
+    playSound()
+    stopSound()
+    updateGame()
    
 # hero
-    draw()
-    jump()
-    collect()
+    move()
     checkCollision()
+    collectCoin()
     
 # obstacle
     draw()
+    move()
 
 # coin
     draw()
+    move()
 
 ## States y States Transitions
 
@@ -92,7 +96,11 @@ Task
 # coin
     draw()
     
+# component
+    drawComponent()
+    
 ### Link
 ### Trello: https://trello.com/b/fjSlcDuS/project-1-the-game
 ### Git: https://github.com/Hachiko9/Project1-the-game
-### Slides: 
+### Deploy: https://hachiko9.github.io/Project1-the-game/
+### Slides: https://docs.google.com/presentation/d/1UO8X34a6DXXMdMk_C0OXduolud0As44gOfuoXhYxBts/edit?usp=sharing
