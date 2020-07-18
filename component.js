@@ -8,9 +8,18 @@ class Component {
     this.img = new Image();
   }
   
-  drawComponent(imgSource) {
+  drawComponent(imgSource, w, h) {
     const gameCtx = this.game.ctx;
     this.img.src = imgSource;
+
+    if (w) {
+      this.width = w;
+    }
+
+    if (h) {
+      this.height = h;
+    }
+
     gameCtx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 }

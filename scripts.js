@@ -18,11 +18,10 @@ window.onload = () => {
   ctx.fillText("fortunately, the resistance continues to fight. a small group of wizards have managed to save themselves, and have entrusted to you,", 10, 170);
   ctx.fillText("their hero, the bit of magic left to him, for you to defeat the witch.", 10, 200);
   ctx.fillText("thanks to this you have obtained a proud and invincible aspect, and a super strength capable of moving at dizzying heights.",10, 230);
-  ctx.fillText("Collect all the coins, don't be destroyed by the fearsome witch henchmen, the powerful black squares, and bring",10, 260);
-  ctx.fillText("the <style> back to the world of the Internet!",10, 290);
-  ctx.fillText("But be careful... Better not take some coins...",10, 320)
-  ctx.fillText("The witch still manages to control the world of the Internet and has moved some coins to mislead you and kill you!",10, 350)
-
+  ctx.font = "24px Arial";
+  ctx.fillText("Collect all the coins, don't be destroyed by the fearsome witch henchmen, ",10, 300);
+  ctx.fillText('the powerful black squares, and bring the <style> back to the world of the Internet!', 10, 340)
+  
   const startGame = () => {
     const myGame = new Game();
     myGame.init();
