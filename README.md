@@ -99,7 +99,7 @@ Task
 # component
     drawComponent()
     
-### Link
+### Links
 ### Trello: https://trello.com/b/fjSlcDuS/project-1-the-game
 ### Git: https://github.com/Hachiko9/Project1-the-game
 ### Deploy: https://hachiko9.github.io/Project1-the-game/
